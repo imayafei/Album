@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Album | Register</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="utf8">
+<?php echo Phalcon\Tag::stylesheetLink('css/bootstrap.min.css')?>
+<?php echo Phalcon\Tag::stylesheetLink('css/common.css')?>
+<?php echo Phalcon\Tag::stylesheetLink('css/register.css')?>
+</head>
+<body>
+	<div class="container">
+
+		<form class="form-register" role="form" action="/register/add"
+			method="post">
+			<h2 class="form-register-heading">Welcome to Join us</h2>
+			<input id="email" name="email" type="email"
+				class="form-control col-md-4" placeholder="邮箱" required="required"
+				autofocus="autofocus"> <input id="username" name="username"
+				type="text" class="form-control col-md-4" placeholder="昵称"
+				required="required"> <input id="password" name="password"
+				type="password" class="form-control" placeholder="密码"
+				required="required"> <input id="repeatpassword"
+				name="repeatpassword" type="password" class="form-control"
+				placeholder="确认密码" required="required">
+			<p> <?php $this->flashSession->output(); ?> </p>
+
+			<button class="btn btn-lg btn-info btn-block" type="submit">注册</button>
+
+
+		
+		</form>
+		<!-- /form-register -->
+	</div>
+	<!-- /container -->
+	<div id="footer">
+      <div class="container">
+        <p class="text-muted">Powered by hongker.2014-2020 </p>
+        <p class="text-muted">盗版必究.请合理上网 </p>
+      </div>
+    </div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<?php echo Phalcon\Tag::javascriptInclude("js/jquery.min.js"); ?>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<?php echo Phalcon\Tag::javascriptInclude("js/bootstrap.min.js"); ?>
+</body>
+</html>

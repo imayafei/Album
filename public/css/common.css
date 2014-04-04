@@ -1,0 +1,20 @@
+/**
+ * 公共css
+ */
+@CHARSET "UTF-8";
+/* Sticky footer styles
+-------------------------------------------------- */
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+
+.errorMessage {
+	color: red;
+}
+#footer {
+	height: 60px;
+	text-align:center;
+	bottom:0px;
+}

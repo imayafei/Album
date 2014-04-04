@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Album | Login</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="utf8">
+<?php echo Phalcon\Tag::stylesheetLink('css/bootstrap.min.css')?>
+<?php echo Phalcon\Tag::stylesheetLink('css/common.css')?>
+<?php echo Phalcon\Tag::stylesheetLink('css/signin.css')?>
+</head>
+<body>
+	<div class="container">
+
+		<form class="form-signin" role="form" action="/login/auth"
+			method="post">
+			<h2 class="form-signin-heading">Welcome</h2>
+			<input id="username" name="username" type="text" class="form-control col-md-4" placeholder="账号" required="required"
+				autofocus="autofocus"> 
+			<input id="password" name="password" type="password" class="form-control" placeholder="密码"
+				required="required"> 
+			<p> <?php $this->flashSession->output(); ?> </p>
+			<label class="checkbox col-md-6"> 
+				<input type="checkbox" value="remember-me"> 记住密码
+			</label>
+
+			<button class="btn btn-lg btn-primary btn-block" type="submit">登陆</button>
+			<label class="forget-password"><a href="#">忘记密码？</a></label>
+
+			<!-- 第三方登录 -->
+			<div class="extra-login">
+				
+
+				<p>
+					还没有账号？马上去<a href="/register">注册!</a>
+				</p>
+			</div>
+		</form>
+		<!-- /form-signin -->
+	</div>
+	<!-- /container -->
+	<div id="footer">
+      <div class="container">
+        <p class="text-muted">Powered by hongker.2014-2020 </p>
+        <p class="text-muted">盗版必究.请合理上网 </p>
+      </div>
+    </div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<?php echo Phalcon\Tag::javascriptInclude("js/jquery.min.js"); ?>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<?php echo Phalcon\Tag::javascriptInclude("js/bootstrap.min.js"); ?>
+</body>
+</html>
