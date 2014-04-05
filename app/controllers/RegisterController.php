@@ -49,7 +49,24 @@ class RegisterController extends \Phalcon\Mvc\Controller {
 	 * @param array $input 
 	 */
 	private function addUser(Array $input) {
+		$user = new Users();
+		$user->username = $input['username'];
+		$user->password = md5($input['password']);
+		$user->email = $input['email'];
 		
+		//插入数据
+		if($user->save() == false) {
+			$this->flashSession->error("注册失败!请重试.");
+			$this->dispatcher->forward(array(
+					'action' => 'index',
+			));
+		}else {
+			echo '注册成功。';
+			$this->dispatcher->forward(array(
+					'controller' => 'index',
+					'action' => 'index',
+			));
+		}
 	}
 	
 	/**

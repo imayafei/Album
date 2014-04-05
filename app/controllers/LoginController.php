@@ -34,8 +34,10 @@ class LoginController extends \Phalcon\Mvc\Controller {
 		 */
 		$params = array(
 			1 => $this->request->getPost('username','string'),
-			2 => md5($this->request->getPost('email','string')),
+			2 => md5($this->request->getPost('password','string')),
 		);
+		
+		
 		
 		/**
 		 * 验证条件：匹配用户名和密码
@@ -50,6 +52,8 @@ class LoginController extends \Phalcon\Mvc\Controller {
 			$conditions,
 			"bind" => $params,
 		));
+		
+		
 
 		/**
 		 * 根据是否成功获取到数据来判断用户是否合法
@@ -58,12 +62,12 @@ class LoginController extends \Phalcon\Mvc\Controller {
 			//todo 显示主页
 			
 			//将用户Id存入session
-			$this->session->set("userid",$user->userid);
+			$this->session->set("username",$user->username);
 			
 			//跳转到已登录验证过的主页
 			$this->dispatcher->forward(array(
 				'controller' => 'index',
-				'action' => 'hasLogin',
+				'action' => 'index',
 			));
 			
 		}else {

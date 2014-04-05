@@ -12,9 +12,14 @@
  */
 class IndexController extends \Phalcon\Mvc\Controller {
 	/**
-	 * 显示未登录过的主页
+	 * 显示主页
 	 */
 	public function indexAction() {
-		
+		if($this->session->has('username')) {
+			$username = $this->session->get('username');
+			$this->view->setVar('username',$username);
+		}
 	}
+	
+	
 }
