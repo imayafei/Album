@@ -1,21 +1,124 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Album | Index</title>
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta charset="utf8">
-<?php echo Phalcon\Tag::stylesheetLink('css/bootstrap.min.css')?>
-</head>
-<body>
-<h3>This is Album Manage System.</h3>
-<?php if(!is_null($username)): ?>
-<p>Welcome,<?php echo $username; ?></p>
-<?php endif;?>
+<link rel="stylesheet" type="css" href="/css/index.css"/>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900|Montez);
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<?php echo Phalcon\Tag::javascriptInclude("js/jquery.min.js"); ?>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<?php echo Phalcon\Tag::javascriptInclude("js/bootstrap.min.js"); ?>
+.sparkley {
+	background: #3e5771;
+	color: white;
+	border: none;
+	padding: 16px 36px;
+	font-weight: normal;
+	border-radius: 3px;
+	transition: all 0.25s ease;
+	box-shadow: 0 38px 32px -23px black;
+	margin: 0 1em 1em;
+}
+
+.sparkley:hover {
+	background: #2c3e50;
+	color: rgba(255, 255, 255, 0.2);
+}
+
+html {
+	font-family: Lato;
+	font-weight: 200;
+	font-size: 1em;
+	text-align: center;
+	color: #ddd;
+	min-height: 100%;
+	background: #092756;
+	background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(35, 24, 82, 0.22)
+		10%, rgba(138, 114, 76, 0) 40%),
+		-moz-linear-gradient(top, rgba(57, 173, 219, 0.25) 0%,
+		rgba(42, 60, 87, 0.4) 100%),
+		-moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(35, 24, 82, 0.22)
+		10%, rgba(138, 114, 76, 0) 40%),
+		-webkit-linear-gradient(top, rgba(57, 173, 219, 0.25) 0%,
+		rgba(42, 60, 87, 0.4) 100%),
+		-webkit-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+	background: -o-radial-gradient(0% 100%, ellipse cover, rgba(35, 24, 82, 0.22)
+		10%, rgba(138, 114, 76, 0) 40%),
+		-o-linear-gradient(top, rgba(57, 173, 219, 0.25) 0%,
+		rgba(42, 60, 87, 0.4) 100%),
+		-o-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+	background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(35, 24, 82, 0.22)
+		10%, rgba(138, 114, 76, 0) 40%),
+		-ms-linear-gradient(top, rgba(57, 173, 219, 0.25) 0%,
+		rgba(42, 60, 87, 0.4) 100%),
+		-ms-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(35, 24, 82, 0.22)
+		10%, rgba(138, 114, 76, 0) 40%),
+		linear-gradient(to bottom, rgba(57, 173, 219, 0.25) 0%,
+		rgba(42, 60, 87, 0.4) 100%),
+		linear-gradient(135deg, #670d10 0%, #092756 100%);
+}
+
+html body {
+	padding: 50px;
+}
+
+h1 span,h2 span,h3 span {
+	font-family: Montez;
+	font-size: 1.9em;
+	font-weight: 300;
+	margin: 0 0.3em;
+	color: #ff0080;
+}
+
+h1 {
+	font-size: 1.9em;
+	width: 900px;
+	margin: 0 auto 1em;
+	text-shadow: 0 2px 1px black;
+}
+
+.img {
+	margin: 40px auto 0;
+	width: 500px;
+	display: block;
+}
+
+.img img {
+	width: 100%;
+	border-radius: 5px;
+}
+
+p {
+	padding: 5px 10px;
+	display: inline-block;
+	margin: 10px auto;
+}
+</style>
+<script src="/js/prefixfree.min.js"></script>
+<script src="/js/modernizr.js"></script>
+</head>
+
+<body>
+	<h1>
+		欢迎来到
+		<span>Album System</span>
+		精彩无限!
+	</h1>
+
+	<a href="/login"><button class="sparkley">Login in your home</button></a>
+	<a href="/register"><button class="sparkley last">Welcome to join us</button></a>
+
+	<div class="img">
+		<img id="image" src="/img/rain.jpg">
+	</div>
+
+	<footer>Copyright © 2013-future Power by hongker ℡12345678</footer>
+
+	<script src='/js/jquery.min.js'></script>
+	<script src='/js/rbeix.js'></script>
+	<script src="/js/index.js"></script>
 
 </body>
+
 </html>

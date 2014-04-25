@@ -64,20 +64,15 @@ class LoginController extends \Phalcon\Mvc\Controller {
 			//将用户Id存入session
 			$this->session->set("username",$user->username);
 			
+			
 			//跳转到已登录验证过的主页
-			$this->dispatcher->forward(array(
-				'controller' => 'index',
-				'action' => 'index',
-			));
+			header("Location:/home");
+
 			
 		}else {
 			//登录失败，跳转至登录页面，重新登录。
-			
 			$this->flashSession->error("用户名或密码输入不正确,登陆失败,请重新输入.");
-			
-			$this->dispatcher->forward(array(
-				'action' => 'index',
-			));
+			header("Location: index");
 			
 		}
 		

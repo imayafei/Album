@@ -37,6 +37,7 @@ class RegisterController extends \Phalcon\Mvc\Controller {
 			$this->dispatcher->forward(array(
 					'action' => 'index',
 			));
+			return;
 		}
 		
 		$this->addUser($input);

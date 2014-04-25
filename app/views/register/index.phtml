@@ -1,47 +1,71 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Album | Register</title>
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta charset="utf8">
-<?php echo Phalcon\Tag::stylesheetLink('css/bootstrap.min.css')?>
-<?php echo Phalcon\Tag::stylesheetLink('css/common.css')?>
-<?php echo Phalcon\Tag::stylesheetLink('css/register.css')?>
-</head>
-<body>
-	<div class="container">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Album | Register</title>
+    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/flat-ui.css" rel="stylesheet">
+    <link href="/css/register.css" rel="stylesheet">
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+      <script src="/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="main">
+  	<div class="main-body">
+  		
+  		<form method="post" action="/login/auth">
+  		<div class="login-form"  >
+  			
+            <div class="form-group has-success">
+              <input type="text" name="username" class="form-control login-field "  placeholder="Enter your name" id="register-name" required="required"
+				autofocus="autofocus"/>
+              <label class="login-field-icon fui-user" for="register-name"></label>
+            </div>
+            
+            <div class="form-group has-success">
+              <input type="email" name="email" class="form-control login-field "  placeholder="Enter your Email" id="register-email" required="required"
+				autofocus="autofocus"/>
+              <label class="login-field-icon fui-mail" for="register-email"></label>
+            </div>
 
-		<form class="form-register" role="form" action="/register/add"
-			method="post">
-			<h2 class="form-register-heading">Welcome to Join us</h2>
-			<input id="email" name="email" type="email"
-				class="form-control col-md-4" placeholder="邮箱" required="required"
-				autofocus="autofocus"> <input id="username" name="username"
-				type="text" class="form-control col-md-4" placeholder="昵称"
-				required="required"> <input id="password" name="password"
-				type="password" class="form-control" placeholder="密码"
-				required="required"> <input id="repeatpassword"
-				name="repeatpassword" type="password" class="form-control"
-				placeholder="确认密码" required="required">
-			<p> <?php $this->flashSession->output(); ?> </p>
+            <div class="form-group has-success">
+              <input type="password" name="password" class="form-control login-field"  placeholder="Password" id="register-pass" required="required"/>
+              <label class="login-field-icon fui-lock" for="register-pass"></label>
+            </div>
 
-			<button class="btn btn-lg btn-info btn-block" type="submit">注册</button>
+            <button tyle="submit" class="btn btn-success btn-lg btn-block" >Sign In</button>
+           
+          </div>
+          
+          </form>
+          </div>
+  		
+  		
+  	</div>
+  		
+  		
+  
 
-
-		
-		</form>
-		<!-- /form-register -->
-	</div>
-	<!-- /container -->
-	<div id="footer">
-      <div class="container">
-        <p class="text-muted">Powered by hongker.2014-2020 </p>
-        <p class="text-muted">盗版必究.请合理上网 </p>
-      </div>
-    </div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<?php echo Phalcon\Tag::javascriptInclude("js/jquery.min.js"); ?>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<?php echo Phalcon\Tag::javascriptInclude("js/bootstrap.min.js"); ?>
-</body>
+  
+  
+<!-- Load JS here for greater good =============================-->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap-select.js"></script>
+    <script src="/js/bootstrap-switch.js"></script>
+    <script src="/js/flatui-checkbox.js"></script>
+    <script src="/js/flatui-radio.js"></script>
+    <script src="/js/jquery.tagsinput.js"></script>
+    <script src="/js/jquery.placeholder.js"></script>
+    <script src="/js/jquery.stacktable.js"></script>
+    <script src="/js/video.js"></script>
+    <script src="/js/application.js"></script>
+  </body>
 </html>
