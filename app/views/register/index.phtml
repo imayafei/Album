@@ -18,32 +18,39 @@
   <div class="main">
   	<div class="main-body">
   		
-  		<form method="post" action="/login/auth">
+  		<form method="post" action="/register/add">
   		<div class="login-form"  >
   			
-            <div class="form-group has-success">
+            <div class="form-group ">
               <input type="text" name="username" class="form-control login-field "  placeholder="Enter your name" id="register-name" required="required"
 				autofocus="autofocus"/>
               <label class="login-field-icon fui-user" for="register-name"></label>
             </div>
             
-            <div class="form-group has-success">
+            <div class="form-group ">
               <input type="email" name="email" class="form-control login-field "  placeholder="Enter your Email" id="register-email" required="required"
 				autofocus="autofocus"/>
               <label class="login-field-icon fui-mail" for="register-email"></label>
             </div>
 
-            <div class="form-group has-success">
-              <input type="password" name="password" class="form-control login-field"  placeholder="Password" id="register-pass" required="required"/>
+            <div class="form-group ">
+              <input type="password" name="password" class="form-control login-field"  placeholder="Your Password" id="register-pass" required="required"/>
               <label class="login-field-icon fui-lock" for="register-pass"></label>
             </div>
+            
+            <div class="form-group ">
+              <input type="password" name="repeatpassword" class="form-control login-field"  placeholder="Password Confirm" id="repeatpassword" required="required"/>
+              <label class="login-field-icon fui-lock" for="register-pass"></label>
+              <p> <?php $this->flashSession->output(); ?></p>
+            </div>
 
-            <button tyle="submit" class="btn btn-success btn-lg btn-block" >Sign In</button>
-           
+            <button type="submit" class="btn btn-success btn-lg btn-block" >Sign up</button>
+           	
           </div>
           
           </form>
           </div>
+          
   		
   		
   	</div>
@@ -52,20 +59,6 @@
   
 
   
-  
-<!-- Load JS here for greater good =============================-->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery-ui-1.10.3.custom.min.js"></script>
-    <script src="/js/jquery.ui.touch-punch.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/bootstrap-select.js"></script>
-    <script src="/js/bootstrap-switch.js"></script>
-    <script src="/js/flatui-checkbox.js"></script>
-    <script src="/js/flatui-radio.js"></script>
-    <script src="/js/jquery.tagsinput.js"></script>
-    <script src="/js/jquery.placeholder.js"></script>
-    <script src="/js/jquery.stacktable.js"></script>
-    <script src="/js/video.js"></script>
-    <script src="/js/application.js"></script>
+<?php $this->partial("common/footer") ?>
   </body>
 </html>

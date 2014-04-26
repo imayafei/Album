@@ -1,0 +1,163 @@
+@CHARSET "UTF-8";
+body {
+	background: url('/img/homebg.jpg');
+	background-position: center; 
+	background-repeat: no-repeat; 
+	background-attachment: fixed;
+	margin:0px; 
+	padding:0px; 
+}
+.myrow {
+	margin: 0px;
+}
+
+.sidebar {
+	background-color:rgba(0,0,0,0.3);
+	position: fixed;
+    left: 0;
+    z-index: 1000;
+    display: block;
+	width:16%;
+	height:88%;
+    overflow-x: hidden;
+	padding:0px;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+
+.sidebar ul li a {
+	color:white;
+	text-align: center;
+}
+.sidebar ul li a:hover {
+	color:#1abc9c;
+	background-color:rgba(0,0,0,0.5);
+}
+.active {
+	background-color:rgba(0,0,0,0.5);
+}
+
+.head {
+	
+	height:100px;
+	width:100px;
+	margin-top:15px;
+	margin-bottom:15px;
+	border-radius:50%;
+	background-size:100% 100%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+.main {
+	width:84%;
+	height:88%;
+	position: fixed;
+	left:16%;
+    display: block;
+}
+footer{
+	background-color:rgba(0,0,0,0.7);
+	position: fixed;
+	bottom:0;
+	left: 0;
+	height:12%;
+	width:100%;
+	display: block;
+}
+.timer {
+	background-color:rgba(255,255,255,0.2);
+	bottom:5%;
+	position: fixed;
+	height:7%;
+	width:100%;
+    overflow-x: auto;
+    overflow-y: hidden; /* Scrollable contents if viewport is shorter than content. */
+	
+}
+
+.timer div  {
+	font-family:"comic sans ms", verdana, sans-serif;
+	font-size:1.6em;
+	text-align: center;
+}
+
+.timer div {
+	height:100%;
+	float:left;
+}
+
+.timer a:hover {
+	color:rgba(255,255,255,0.8);
+}
+.timer a div:hover {
+	background-color: rgba(0,0,0,0.5);
+}
+
+.timeline {
+	border:3px solid rgba(255,255,255,0.5);
+	border-style: none solid none none;
+	color:white;
+	left:0;
+	width:16%;
+}
+.lastmonth {
+	border:3px solid rgba(255,255,255,0.5);
+	border-style: none solid none none;
+	width:16%;
+	left:16%;
+}
+.month {
+	border:3px solid rgba(255,255,255,0.5);
+	border-style: none solid none none;
+	color:white;
+	width:12%;
+	left:32%;
+}
+.day {
+	border:3px solid rgba(255,255,255,0.5);
+	border-style: none solid none none;
+	color:white;
+	width:40%;
+	left:44%;
+}
+
+.day table {
+	padding: 0;
+  	margin: 0;
+	width:100%;
+}
+
+.day table td a{
+	display:inline-block;
+	width:40px;
+	border-radius:50%;	
+}
+.day table td a:hover {
+	background-color:rgba(0,0,0,0.3);
+}
+
+.nextmonth {
+	border:3px solid rgba(255,255,255,0.5);
+	border-style: none solid none none;
+	width:16%;
+	left:84%;
+}
+
+.declaration {
+	position: fixed;
+	bottom:0;
+	height:5%;
+	width:100%;
+    overflow-x: auto;
+    overflow-y: hidden; /* Scrollable contents if viewport is shorter than content. */
+}
+
+footer div p {
+	font-family:"comic sans ms", verdana, sans-serif;
+}
+
+.declaration p {
+	font-size:1.4em;
+}

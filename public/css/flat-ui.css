@@ -606,7 +606,7 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #1abc9c;
+  background-color: rgba(27, 143, 115, 0.66);
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -717,7 +717,7 @@ fieldset[disabled] .btn-danger.active {
 }
 .btn-success {
   color: #ffffff;
-  background-color: #2ecc71;
+  background-color: rgba(39, 194, 64, 0.69);
 }
 .btn-success:hover,
 .btn-success:focus,

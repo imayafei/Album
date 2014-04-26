@@ -64,7 +64,7 @@ class RegisterController extends \Phalcon\Mvc\Controller {
 		}else {
 			echo '注册成功。';
 			$this->dispatcher->forward(array(
-					'controller' => 'index',
+					'controller' => 'home',
 					'action' => 'index',
 			));
 		}

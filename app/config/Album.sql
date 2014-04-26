@@ -11,6 +11,7 @@ use album;
  * username 用户名
  * password 用户密码
  */
+drop table if exists users;
 create table users(
 	userid mediumint unsigned not null primary key auto_increment,
 	username char(15) not null,
